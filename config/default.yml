@@ -1,5 +1,4 @@
 server:
-  NODE_ENV: ctf
   port: 3000
   basePath: ''
 application:
