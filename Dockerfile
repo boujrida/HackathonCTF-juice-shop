@@ -15,7 +15,7 @@ RUN rm data/chatbot/botDefaultTrainingData.json || true
 RUN rm ftp/legal.md || true
 RUN rm i18n/*.json || true
 
-ARG CYCLONEDX_NPM_VERSION=latest
+ARG CYCLONEDX_NPM_VERSION=latest -e "NODE_ENV=ctf" -e "CTF_KEY=5678904321"
 RUN npm install -g @cyclonedx/cyclonedx-npm@$CYCLONEDX_NPM_VERSION
 RUN npm run sbom
 
